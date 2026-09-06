@@ -71,7 +71,7 @@ SIGNOVA/
 
 ## How to View
 You can view the live website here:
-
+https://rojashree03.github.io/Signova/
 
 ## 🔗 GitHub Repository
 

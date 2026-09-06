@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNOVA - Secure Authentication</title>
+    <!-- favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+
+<body class="bg-slate-950 text-white">
+    <!-- Navbar -->
+    <nav
+        class="bg-slate-900 px-5 py-4 flex items-center justify-between shadow-md sticky top-0 z-10 border-b border-slate-800">
+
+        <!-- Logo -->
+        <div>
+            <div class="text-2xl font-bold text-white">
+                SIGN<span class="text-indigo-400">OVA</span>
+            </div>
+            <div class="h-0.5 w-8 bg-indigo-500 rounded-full"></div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+
+        <button id="mobileMenuButton" class="md:hidden text-slate-300" aria-label="Open navigation menu">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+        </button>
+
+
+        <!-- Desktop Navigation -->
+
+        <div class="hidden md:flex items-center gap-6">
+
+            <a href="index.html" class="text-white font-semibold">
+                Home
+            </a>
+
+            <a href="#features" class="text-slate-400 hover:text-white">
+                Features
+            </a>
+
+            <a href="#about" class="text-slate-400 hover:text-white">
+                About
+            </a>
+
+            <a href="login.html" class="border border-slate-700 px-5 py-2 rounded-md hover:bg-slate-800">
+                Login
+            </a>
+
+            <a href="register.html" class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-500">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-5 py-5">
+
+        <div class="flex flex-col gap-4">
+
+            <a href="index.html" class="mobile-link text-white font-semibold">
+                Home
+            </a>
+
+            <a href="#features" class="mobile-link text-slate-400">
+                Features
+            </a>
+
+            <a href="#about" class="mobile-link text-slate-400">
+                About
+            </a>
+
+            <div class="flex gap-3 pt-3 border-t border-slate-800">
+
+                <a href="login.html" class="flex-1 text-center border border-slate-700 px-4 py-2 rounded-md">
+                    Login
+                </a>
+
+                <a href="register.html" class="flex-1 text-center bg-indigo-600 px-4 py-2 rounded-md">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="bg-slate-950 px-6 py-16 md:px-12 md:py-24">
+
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center text-center lg:text-left gap-12 lg:gap-20">
+
+            <!-- Hero Content -->
+
+            <div class="max-w-xl">
+                <p class="text-indigo-400 font-semibold mb-4">
+                    SIMPLE • SECURE • SMART
+                </p>
+                <h1 class="font-bold text-4xl md:text-6xl leading-tight">
+                    Secure access for your
+                    <span class="text-indigo-400">
+                        digital world.
+                    </span>
+                </h1>
+                <p class="text-slate-400 mt-6 leading-relaxed">
+                    SIGNOVA is a modern authentication project
+                    built using HTML, Tailwind CSS and JavaScript.
+                    Register, validate your details and login with
+                    a simple and responsive interface.
+                </p>
+
+                <!-- Buttons -->
+
+                <div class="flex flex-wrap gap-3 justify-center lg:justify-start mt-8">
+                    <a href="register.html"
+                        class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-500 transition duration-300">
+                        Create Account
+                    </a>
+                    <a href="login.html"
+                        class="border border-slate-600 px-6 py-3 rounded-md hover:bg-slate-800 transition duration-300">
+                        Login
+                    </a>
+                </div>
+
+                <!-- Small Information -->
+                <p class="text-slate-500 mt-6 text-sm">
+                    ✓ Real-time validation
+                    &nbsp;&nbsp;
+                    ✓ Responsive design
+                    &nbsp;&nbsp;
+                    ✓ Password strength
+                </p>
+
+            </div>
+
+            <!-- Authentication Preview -->
+            <div class="w-full max-w-md">
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+
+                    <!-- Preview Header -->
+                    <div class="flex items-center justify-between mb-6">
+
+                        <div>
+                            <p class="text-sm text-slate-500">
+                                Welcome back
+                            </p>
+                            <h2 class="text-2xl font-bold">
+                                Sign In
+                            </h2>
+                        </div>
+
+                        <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-xl">
+                            🔐
+                        </div>
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-4">
+                        <label class="text-sm text-slate-300">
+                            Email Address
+                        </label>
+
+                        <div class="mt-2 bg-slate-950 border border-slate-800 rounded-md px-4 py-3 text-slate-500">
+                            student@example.com
+                        </div>
+
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-5">
+                        <label class="text-sm text-slate-300">
+                            Password
+                        </label>
+                        <div class="mt-2 bg-slate-950 border border-slate-800  rounded-md px-4 py-3 text-slate-500">
+                            ••••••••••
+                        </div>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="flex justify-between text-sm mb-5">
+                        <span class="text-green-400">
+                            ✓ Validated
+                        </span>
+                        <span class="text-slate-500">
+                            Secure Login
+                        </span>
+                    </div>
+
+                    <div class="bg-indigo-600 rounded-md py-3 text-center font-semibold">
+                        Login Securely
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="px-6 py-16 md:px-12">
+
+        <div class="text-center">
+            <h2 class="font-bold text-3xl md:text-4xl">
+                Why Choose SIGNOVA?
+            </h2>
+            <p class="text-slate-400 mt-2 max-w-2xl mx-auto">
+                A simple authentication system demonstrating important frontend development concepts.
+            </p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="grid md:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto">
+
+            <!-- Feature 1 -->
+            <div
+                class="border border-slate-800 bg-slate-900 p-6 rounded-xl text-center shadow-sm hover:shadow-lg hover:border-indigo-500/50 transition duration-300">
+
+                <div class="text-3xl mb-4">
+                    ✓
+                </div>
+                <h3 class="font-semibold text-xl">
+                    Real-Time Validation
+                </h3>
+                <p class="text-slate-400 mt-3">
+                    Name, email and password fields are
+                    validated while the user types.
+                </p>
+
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+                class="border border-slate-800 bg-slate-900 p-6 rounded-xl text-center shadow-sm hover:shadow-lg hover:border-indigo-500/50 transition duration-300">
+                <div class="text-3xl mb-4">
+                    🔒
+                </div>
+                <h3 class="font-semibold text-xl">
+                    Password Strength
+                </h3>
+                <p class="text-slate-400 mt-3">
+                    Check password length and strength before allowing submission.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+                class="border border-slate-800 bg-slate-900 p-6 rounded-xl text-center shadow-sm hover:shadow-lg hover:border-indigo-500/50 transition duration-300">
+
+                <div class="text-3xl mb-4">
+                    ⚡
+                </div>
+                <h3 class="font-semibold text-xl">
+                    Responsive Design
+                </h3>
+                <p class="text-slate-400 mt-3">
+                    The same interface works smoothly on mobile, tablet and desktop.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- How It Works -->
+    <section id="about" class="bg-slate-900 px-6 py-16 md:px-12">
+
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="font-bold text-3xl md:text-4xl">
+                    How SIGNOVA Works
+                </h2>
+                <p class="text-slate-400 mt-2">
+                    Three simple steps to access your account.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="flex gap-4 bg-slate-950 border border-slate-800 p-6 rounded-xl">
+                    <div class="text-indigo-400 font-bold text-xl">
+                        01
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">
+                            Create Account
+                        </h3>
+                        <p class="text-slate-400 mt-2 text-sm">
+                            Enter your name, email and password.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-4 bg-slate-950 border border-slate-800 p-6 rounded-xl">
+                    <div class="text-indigo-400 font-bold text-xl">
+                        02
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">
+                            Validate Details
+                        </h3>
+                        <p class="text-slate-400 mt-2 text-sm">
+                            JavaScript checks the entered information in real time.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-4 bg-slate-950 border border-slate-800 p-6 rounded-xl">
+                    <div class="text-indigo-400 font-bold text-xl">
+                        03
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">
+                            Login
+                        </h3>
+                        <p class="text-slate-400 mt-2 text-sm">
+                            Sign in using your registered credentials.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Call To Action -->
+    <section class="px-6 py-16 md:px-12">
+
+        <div class="max-w-4xl mx-auto bg-indigo-600 rounded-2xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Ready to get started?
+            </h2>
+            <p class="text-indigo-100 mt-3"> Create your SIGNOVA account and experience a simple authentication system.
+            </p>
+
+            <a href="register.html"
+                class="inline-block bg-white text-indigo-700 px-6 py-3 rounded-md mt-6 font-semibold hover:bg-indigo-50 transition duration-300">
+                Create Account
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 px-6 py-10 md:px-12">
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Brand -->
+            <div>
+                <div class="text-2xl font-bold"> SIGN<span class="text-indigo-400"> OVA </span> </div>
+
+                <div class="h-0.5 w-8 bg-indigo-500 rounded-full mt-2"> </div>
+
+                <p class="text-slate-400 mt-4 max-w-sm">
+                    A simple and responsive authentication project built with HTML, Tailwind CSS and JavaScript.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="font-semibold text-lg">
+                    Quick Links
+                </h3>
+                <ul class="mt-4 space-y-3 text-slate-400">
+                    <li>
+                        <a href="index.html" class="hover:text-white">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="login.html" class="hover:text-white">
+                            Login
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="register.html" class="hover:text-white">
+                            Register
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Technologies -->
+            <div>
+                <h3 class="font-semibold text-lg">
+                    Technologies
+                </h3>
+                <ul class="mt-4 space-y-3 text-slate-400">
+
+                    <li>HTML5</li>
+
+                    <li>Tailwind CSS</li>
+
+                    <li>Modern JavaScript</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-slate-800 mt-8 pt-6 text-center">
+            <p class="text-sm text-slate-500">
+                © 2026 SIGNOVA. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

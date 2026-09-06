@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNOVA | Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-slate-900 px-5 py-4 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <a href="index.html" class="text-2xl font-bold"> SIGN<span class="text-indigo-400">OVA</span> </a>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <main class="min-h-[calc(100vh-73px)] flex items-center justify-center px-5 py-10">
+
+        <div class="w-full max-w-md">
+
+            <!-- Header -->
+            <div class="text-center mb-7">
+                <h1 class="text-3xl font-bold"> Welcome back </h1>
+                <p class="text-slate-400 mt-2"> Sign in to continue to SIGNOVA. </p>
+            </div>
+
+            <!-- Login Card -->
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+
+                <form id="loginForm" novalidate>
+
+                    <!-- Email -->
+                    <div class="mb-5">
+                        <label for="loginEmail" class="block text-sm text-slate-300 mb-2"> Email Address </label>
+                        <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" class="form-input">
+                        <p id="loginEmailError" class="error-message"> </p>
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="mb-5">
+                        <div class="flex justify-between mb-2">
+                            <label for="loginPassword" class="text-sm text-slate-300"> Password </label>
+                            <span class="text-xs text-slate-600"> Min. 6 characters </span>
+                        </div>
+
+                        <div class="relative">
+                            <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password" class="form-input pr-12">
+                            <button type="button" id="loginPasswordToggle" class="password-toggle"> 👁 </button>
+                        </div>
+
+                        <p id="loginPasswordError" class="error-message"> </p>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="flex justify-between items-center mb-6">
+
+                        <label class="flex items-center gap-2 text-sm text-slate-400">
+                            <input type="checkbox" id="rememberMe" class="accent-indigo-600">
+                            Remember me
+                        </label>
+
+                        <button type="button" id="forgotPassword" class="text-sm text-indigo-400 hover:text-indigo-300"> Forgot password? </button>
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button type="submit" id="loginButton" disabled class="submit-button w-full"> Sign In </button>
+
+                </form>
+
+                <!-- Register Link -->
+                <p class="text-center text-sm text-slate-400 mt-6">
+                    Don't have an account?
+                    <a href="register.html" class="text-indigo-400 hover:text-indigo-300">
+                        Create account
+                    </a>
+                </p>
+            </div>
+
+
+            <!-- Security Note -->
+            <p class="text-center text-xs text-slate-600 mt-5">
+                🔒 Demo authentication using browser LocalStorage
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">
+        <span id="toastIcon">✓</span>
+        <span id="toastMessage">Success</span>
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

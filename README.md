@@ -1,104 +1,92 @@
-# SIGNOVA - Secure Authentication Website 🔐
+# SIGNOVA – Secure Authentication Website
 
-SIGNOVA is a modern and responsive authentication website created using HTML, Tailwind CSS, and JavaScript.
+SIGNOVA is a responsive authentication website built using **HTML, Tailwind CSS, and JavaScript**. The project is designed to provide a clean, modern, and user-friendly interface for user registration and login.
 
-The project provides a simple authentication flow where users can create an account, log in, and access the home page. It also includes real-time form validation and other useful frontend features.
+The website demonstrates the use of **JavaScript form validation, DOM manipulation, LocalStorage, responsive design, and interactive authentication features** to create a frontend-based authentication system.
 
 ## Features
 
-- User Registration
-- User Login
+- Responsive design for mobile, tablet, and desktop screens
+- Home page with:
+- Introduction to SIGNOVA
+- Authentication system overview
+- Main feature sections
+- Registration page with:
+- Full Name field
+- Email Address field
+- Password field
+- Terms & Conditions
 - Real-time form validation
-- Name validation
-- Email validation
-- Password validation
 - Password strength indicator
-- Show / Hide Password
-- Submit button validation
-- Duplicate email detection
+- Login page with:
+- Email and password fields
 - Remember Me option
+- Show / Hide Password
 - Forgot Password notification
+- Login validation
+- Duplicate email detection
+- Submit button validation
 - Toast notifications
-- Responsive design
 - Mobile navigation menu
 - LocalStorage-based demo authentication
-
-## Pages
-
-### Home Page
-
-The home page introduces SIGNOVA and displays the main features of the authentication system.
-
-### Registration Page
-
-Users can create a new account by entering:
-
-- Full Name
-- Email Address
-- Password
-- Terms & Conditions
-
-The form validates the user input in real time before allowing registration.
-
-### Login Page
-
-Registered users can log in using their email and password.
-
-The login page also provides:
-
-- Remember Me
-- Show / Hide Password
-- Forgot Password option
-- Login validation
+- Responsive layouts
+- Interactive buttons and form elements
 
 ## Technologies Used
 
-- HTML5
-- Tailwind CSS
-- JavaScript
-- Browser LocalStorage
+- **HTML5**
+- **Tailwind CSS**
+- **JavaScript**
+- **Browser LocalStorage**
+- **Responsive CSS utilities**
 
-## Project Structure
+## Learning Objectives
 
-SIGNOVA/
-│
-├── index.html
-├── login.html
-├── register.html
-├── style.css
-├── script.js
-└── README.md
+This project was created to practice:
 
-## How to View
-You can view the live website here:
-https://rojashree03.github.io/Signova/
-
-## 🔗 GitHub Repository
-
-https://github.com/RojaShree03/Signova
-
-## Data Storage
-
-This project uses the browser's LocalStorage to demonstrate registration and login functionality.
-
-User registration data is stored locally in the browser and can be used for login validation.
-
-> Note: LocalStorage authentication is used only for demonstration purposes. A real-world authentication system should use a backend server, database, encrypted connections, and secure password hashing.
+- Structuring a multi-page authentication website using HTML
+- Using Tailwind CSS utility classes
+- Creating responsive layouts for different screen sizes
+- Creating registration and login forms
+- Performing real-time form validation using JavaScript
+- Working with DOM manipulation
+- Creating password strength validation
+- Implementing Show / Hide Password functionality
+- Using LocalStorage for browser-based data storage
+- Handling user authentication logic on the frontend
+- Creating toast notifications and interactive UI elements
+- Improving user experience through responsive and accessible forms
 
 ## Responsive Design
 
-SIGNOVA is designed to work across:
+SIGNOVA is designed to work across different screen sizes.
 
-- Mobile devices
-- Tablets
-- Desktop screens
+- **Mobile:** Mobile-friendly navigation and single-column form layouts
+- **Tablet:** Responsive content and authentication sections
+- **Desktop:** Spacious layouts with organized navigation and form sections
 
-The same HTML structure adapts to different screen sizes using responsive CSS and Tailwind CSS classes.
+Tailwind CSS responsive utilities are used to adapt the design according to the screen size.
 
-## Project Objective
+## How to Visit
 
-The main objective of SIGNOVA is to demonstrate how frontend technologies can be used to create a complete authentication interface with real-time validation, responsive design, and browser-based data storage.
+You can visit the live SIGNOVA website here:
 
-## Author
+**Live Website:**
 
-**Roja Shree**
+https://rojashree03.github.io/Signova/
+
+The website is hosted using **GitHub Pages** and can be accessed directly from a web browser.
+
+## GitHub Repository
+
+You can view the complete source code here:
+
+**Repository:**
+
+https://github.com/RojaShree03/Signova
+
+## Project
+
+**SIGNOVA – Secure Authentication Website**
+
+Built as a web development learning project to practice **HTML, Tailwind CSS, and JavaScript** and develop real-world skills in form validation, DOM manipulation, browser-based authentication, responsive UI design, and interactive web development.
